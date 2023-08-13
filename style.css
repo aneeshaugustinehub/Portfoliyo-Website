@@ -1,45 +1,11 @@
- body {
+body {
   text-transform: capitalize;
 }
-/*
-.navb{
-  font-size: 1erm;
-  background-color: #7e57c2;
+footer {
+  background-color: rgb(43, 44, 67);
+  color: aliceblue;
+  height: 70px;
 }
-
-.card{
-  margin: auto;
+footer > p{
+padding-top: 25px; text-align: center;
 }
-
-.content {
-  padding: 10% 10%;
-  margin: auto;
-  font-size: 1.1rem;
-}
-.about-me{
-  padding: 10% 10%;
-  margin: auto;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-.skillel{
-  margin: 2%;
-}
-.contact{
-  margin: auto;
-}
-
-
-dialog{
-  opacity: 0;
-  scale: 0;
-  display: block;
-  transition: all 0.5s;
-}
-dialog[open]{
-  opacity: 1;
-  scale: 1;
-  background-color: #cbb5ef;
-  width: 500px;
-  border-radius: 10px;
-}  */
