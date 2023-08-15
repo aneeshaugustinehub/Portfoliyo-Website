@@ -9,3 +9,13 @@ footer {
 footer > p{
 padding-top: 25px; text-align: center;
 }
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
