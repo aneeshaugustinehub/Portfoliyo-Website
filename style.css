@@ -6,8 +6,9 @@ footer {
   color: aliceblue;
   height: 70px;
 }
-footer > p{
-padding-top: 25px; text-align: center;
+footer > p {
+  padding-top: 25px;
+  text-align: center;
 }
 body {
   background-color: rgb(255, 255, 255);
@@ -19,9 +20,22 @@ body {
   background-color: black;
   color: white;
 }
-p{
-  font-size:1.15rem;
+p {
+  font-size: 1.15rem;
 }
-ul{
-  font-size:1.15rem; 
+ul {
+  font-size: 1.15rem;
+}
+#home {
+  color: aliceblue;
+  background: rgb(89, 37, 138);
+  background: linear-gradient(
+    90deg,
+    rgba(89, 37, 138, 1) 0%,
+    rgb(167, 50, 191) 49%,
+    rgba(76, 32, 146, 1) 100%
+  );
+  color: aliceblue;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
