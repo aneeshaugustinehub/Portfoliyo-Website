@@ -39,6 +39,23 @@ ul {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-a{
+a {
   text-decoration: none;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
+.headicon{
+  height: 35px;
 }
