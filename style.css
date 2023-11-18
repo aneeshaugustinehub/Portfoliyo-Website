@@ -6,12 +6,11 @@ footer {
   color: rgb(124, 140, 153);
   height: 70px;
   font-size: 1 rem;
-
 }
 footer > p {
   padding-top: 25px;
   text-align: center;
-} 
+}
 body {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -31,7 +30,7 @@ ul {
 #home {
   color: aliceblue;
   background: rgb(48, 63, 82);
-  
+
   color: aliceblue;
   margin-top: 10px;
   padding-top: 55px;
