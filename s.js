@@ -15,3 +15,9 @@ const observer = new IntersectionObserver((entries) =>{
 
   const hidddenElement = document.querySelectorAll('.hidden');
   hidddenElement.forEach((el) => observer.observe(el))
+
+  let date = new Date().getFullYear();
+
+  let copy = '<p>&copy; '+ date +' aneesh augustine</p>'
+
+  document.getElementById('year').innerHTML = copy
