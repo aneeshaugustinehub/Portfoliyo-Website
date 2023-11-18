@@ -2,7 +2,7 @@ body {
   text-transform: capitalize;
 }
 footer {
-  background-color: rgb(43, 44, 67);
+  background-color: rgb(48, 63, 82);
   color: aliceblue;
   height: 70px;
 }
@@ -28,13 +28,8 @@ ul {
 }
 #home {
   color: aliceblue;
-  background: rgb(89, 37, 138);
-  background: linear-gradient(
-    90deg,
-    rgba(89, 37, 138, 1) 0%,
-    rgb(167, 50, 191) 49%,
-    rgba(76, 32, 146, 1) 100%
-  );
+  background: rgb(48, 63, 82);
+  
   color: aliceblue;
   margin-top: 10px;
   padding-top: 55px;
