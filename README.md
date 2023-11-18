@@ -1,7 +1,7 @@
-# My-Portfoliyo-Website
+# Portfoliyo-Website
 What is it?
 
-My-Portfolio-Website is a repository that contains code and resources for creating a portfolio website. It is a good starting point for anyone who wants to create a professional website to showcase their work, skills, and experience.
+Portfolio-Website is a repository that contains code and resources for creating a portfolio website. It is a good starting point for anyone who wants to create a professional website to showcase their work, skills, and experience.
 
 What's included?
 
