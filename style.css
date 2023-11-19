@@ -13,13 +13,21 @@ footer > p {
 }
 body {
   background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  color:  rgb(48, 63, 82);
   font-size: 20px;
+}
+.projects{
+  color:  rgb(48, 63, 82);
+
 }
 
 .dark-mode {
-  background-color: black;
-  color: white;
+  background-color:  rgb(48, 63, 82);
+  color: rgb(231, 231, 231);
+}
+.light-mode {
+  background-color: rgb(236, 234, 234);
+  color:  rgb(48, 63, 82);
 }
 p {
   font-size: 1.15rem;
@@ -64,9 +72,6 @@ a {
 .headicon:hover {
   opacity: 1;
   filter: brightness(1.3);
-}
-.skills {
-  background-color: rgb(255, 255, 255);
 }
 
 .skill:nth-child(1) {

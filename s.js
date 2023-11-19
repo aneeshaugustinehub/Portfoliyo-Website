@@ -1,7 +1,4 @@
-/* function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  } */
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
