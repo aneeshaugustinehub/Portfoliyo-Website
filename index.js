@@ -1,5 +1,5 @@
 
-const hidddenElement = document.querySelectorAll(".hidden");
+const hidddenElement = document.querySelectorAll(".scroll-hidden");
 hidddenElement.forEach((el) => observer.observe(el));
 
 let date = new Date().getFullYear();
