@@ -25,43 +25,64 @@
 </head>
 
 <body class=" bg-purple-200 dark:bg-purple-700 text-gray-800 dark:text-gray-200">
-  <nav class="w-full p-2 my-2 fixed bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-xl backdrop-blur-md">
-    <div class="w-full md:inline-flex items-center p-2 px-5">
-      <div class="mx-5">
-        <a class="text-xl" href="/">Aneesh Augustine</a>
+  <nav
+    class="w-full inline-flex h-16 px-0 my-2 fixed bg-gray-400/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-xl backdrop-blur-md">
+    <div class="drop-menu w-full h-full inline-flex items-center px-2" id="drop-menu">
+      <div class="mx-4">
+        <a class="text-xl font-semibold" href="/">Aneesh Augustine</a>
       </div>
-      <div class=" lg:inline-flex flex mx-5">
-        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" aria-current="page"
-        href="#">Home</a>
-        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#about">about</a>
-        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#skills">skills</a>
-        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#projects">projects</a>
-        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#contact">contact</a>
+      <div class="hidden md:flex md:flex-row flex-col">
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          aria-current="page" href="#">Home</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#about">about</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#skills">skills</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#projects">projects</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#contact">contact</a>
       </div>
-      <div class="dark-button  ml-auto">
+      <div class="dark-button md:flex md:flex-row flex-col ml-auto">
         <!-- Sun icon (shown in dark mode) | Moon icon (shown in light mode) -->
-        <button id="theme-toggle" class="rounded-2xl bg-gray-950/50 px-5 py-3 text-sm font-medium text-white">
+        <button id="theme-toggle"
+          class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white">
           <!-- Moon icon - visible in light mode -->
           <svg id="moon-icon" class="w-6 h-6 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-        </svg>
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
           <!-- Sun icon - visible in dark mode -->
           <svg id="Sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden dark:block" fill="currentColor"
             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-        </svg>
-      </button>
-    </div>
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+          </svg>
+        </button>
+        <button class="md:hidden buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+      </div>
     </div>
   </nav>
+  <!-- Mobile dropdown (outside nav, below it) -->
+  <div id="mobile-menu"
+    class="hidden md:hidden fixed top-20 p-1  flex-col gap-1 z-4 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#home">Home</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#about">About</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#skills">Skills</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#projects">Projects</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#contact">Contact</a>
+  </div>
   <header class="grid md:grid-cols-2 justify-center items-center pt-10" id="home">
     <div class="mt-10 flex justify-center items-center">
       <img src="img/banner.webp" alt="profile image" height="500px" width="500px" />
     </div>
-    <div class="mt-10 flex-col justify-center items-center">
+    <div class="mt-10 flex-col justify-center items-center mx-2">
       <p>Hi, i'm</p>
-      <p class="xl:text-6xl md:text-4xl text-5xl"> I'm Aneesh Augustine <br>
+      <p class="xl:text-6xl md:text-4xl font-semibold text-5xl"> I'm Aneesh Augustine <br>
         Full Stack Web <br> Developer.</p>
       <p style="font-size: 1.1rem">
         Driven by a passion for crafting immersive, <br> interactive experiences that engage and inspire users.
@@ -87,12 +108,12 @@
       </div>
     </div>
   </header>
-  <div class="lg:mx-6">
+  <div class="lg:mx-6 mx-3">
     <section class="" id="projects">
-      <h1 class="text-4xl py-5">Check out my projects</h1>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full rounded-lg px-5">
+      <h1 class="text-3xl font-semibold py-5">Check out my projects</h1>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full rounded-lg md:px-5">
         <div
-          class="card mt-6 lg:mx-4 mx-3 py-5 px-2 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 ">
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 ">
           <div class="">
             <img src="img/project/shopping card image.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
           </div>
@@ -123,7 +144,7 @@
           </div>
         </div>
         <div
-          class="card mt-6 lg:mx-4 mx-3 py-5 px-2 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
           <div class="">
             <img src="img/project/netflix.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
           </div>
@@ -156,7 +177,7 @@
           </div>
         </div>
         <div
-          class="card mt-6 lg:mx-4 mx-3 py-5 px-2 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
           <div class="">
             <img src="img/project/olx.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
           </div>
@@ -189,7 +210,7 @@
           </div>
         </div>
         <div
-          class="card mt-6 lg:mx-4 mx-3 py-5 px-2 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
           <div class="">
             <img src="img/project/olx.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
           </div>
@@ -222,7 +243,7 @@
       </div>
     </section>
     <section class="pt-5 " id="about">
-      <h1 class="text-4xl py-5 ">about me</h1>
+      <h1 class="text-3xl font-semibold py-5 ">about me</h1>
       <div class="px-5 lg:mx-6">
         <p>
           As a skilled web developer with expertise in React JS, I have a
@@ -236,7 +257,7 @@
       </div>
     </section>
     <section class="" id="skills">
-      <h1 class="text-4xl py-5">skills</h1>
+      <h1 class="text-3xl font-semibold py-5">skills</h1>
       <div class="grid lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-4 grid-cols-3">
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
@@ -295,7 +316,7 @@
       </div>
     </section>
     <section class="pt-5" id="contact">
-      <h1 class="text-4xl py-5">contact me</h1>
+      <h1 class="text-3xl font-semibold py-5">contact me</h1>
       <div class="">
 
         <form class="max-w-sm mx-auto">
