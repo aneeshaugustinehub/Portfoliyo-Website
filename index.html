@@ -1,363 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animation.css" />
-    <title>Aneesh Augustine</title>
-    <link rel="shortcut icon" href="img/pp.png" type="image/x-icon" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Aneesh Augustine</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Aneesh Augustine</title>
+  <link rel="shortcut icon" href="img/pp.png" type="image/x-icon" /> <!-- 1. Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 2. Tailwind config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <!-- 3. Load theme before page renders (no flash) -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' ||
+      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</head>
+
+<body class=" bg-purple-200 dark:bg-purple-700 text-gray-800 dark:text-gray-200">
+  <nav
+    class="w-full inline-flex h-16 px-0 my-2 fixed bg-gray-400/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-xl backdrop-blur-md">
+    <div class="drop-menu w-full h-full inline-flex items-center px-2" id="drop-menu">
+      <div class="mx-4">
+        <a class="text-xl font-semibold" href="/">Aneesh Augustine</a>
+      </div>
+      <div class="hidden md:flex md:flex-row flex-col">
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          aria-current="page" href="#">Home</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#about">about</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#skills">skills</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#projects">projects</a>
+        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+          href="#contact">contact</a>
+      </div>
+      <div class="dark-button md:flex md:flex-row flex-col ml-auto">
+        <!-- Sun icon (shown in dark mode) | Moon icon (shown in light mode) -->
+        <button id="theme-toggle"
+          class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white">
+          <!-- Moon icon - visible in light mode -->
+          <svg id="moon-icon" class="w-6 h-6 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+          <!-- Sun icon - visible in dark mode -->
+          <svg id="Sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden dark:block" fill="currentColor"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+          </svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#about">about</a>
-            <a class="nav-link" href="#skills">skills</a>
-            <a class="nav-link" href="#projects">projects</a>
-            <a class="nav-link" href="#contact">contact</a>
-          </div>
-        </div>
+        <button class="md:hidden buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white" id="menu-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
       </div>
-    </nav>
-
-    <header class="m-auto " id="home">
-      <div class="form-check form-switch ms-auto mt-3 me-3 float-end mb-3">
-              <label class="form-check-label ms-3" for="lightSwitch">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  fill="currentColor"
-                  class="bi bi-brightness-high"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                  />
-                </svg>
-              </label>
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="lightSwitch"
-                onchange="darkmode(this)"
-              />
-            </div>
-      <div class="container-md">
-        <div class="row">
-          <div class="col-md-6 m-auto pt-5 justify-content-center">
-            
-            
-            <div>
-              <p>Hi, i'm</p>
-              <p style="font-size: 50px">aneesh augustine</p>
-              <p style="font-size: 1.1rem">
-                Self-taught MERN stack developer passionate about <br />
-                web development and building interactive user experiences.
-                <br />
-              </p>
-              <span>
-                <form
-                  style="display: inline"
-                  method="get"
-                  action="img/Aneesh's Resume.pdf"
-                  target="_blank"
-                >
-                  <button type="submit" class="btn btn-outline-light">
-                    Resume
-                  </button>
-                </form>
-                <a href="https://github.com/aneeshaugustinehub" target="_blank">
-                  <img class="headicon" src="img/github.png" alt="Logo" />
-                </a>
-                <a href="#contact">
-                  <img class="headicon" src="img/gmail.png" alt="Logo" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/aneesh-augustine-"
-                  target="_blank"
-                >
-                  <img class="headicon" src="img/linkedin.png" alt="Logo" />
-                </a>
-              </span>
-            </div>
-          </div>
-          <div class="col-md-6 justify-content-center">
-            <img src="img/banner.webp" alt="profile image" height="100%" width="100%" />
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="container-md">
-      <section class="pt-5 hidden" id="about">
-        <h1>about me</h1>
-        <div class="row p-5">
-          <div class=".col-md-6">
-            <p>
-              As a skilled web developer with expertise in React JS, I have a
-              proven track record of crafting interactive user interfaces that
-              deliver engaging and seamless user experiences. With a keen eye
-              for modern web design principles and a strong command of React JS,
-              I am adept at building dynamic and high-performance web
-              applications that are responsive and scalable across various
-              devices and platforms.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="m-auto pt-5 hidden" style="text-align: left" id="skills">
-        <h1>skills</h1>
-        <div class="row p-5"></div>
-        <div class="row content skills" style="text-align: center">
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/html-5.png" alt="" width="70" />
-            <p>HTML</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/css.png" alt="" width="70" />
-            <p>CSS</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/javascript.png" alt="" width="70" />
-            <p>javaScript</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/atom.png" alt="" width="70" />
-            <p>React js</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/nodejs.png" alt="" width="70" />
-            <p>node js</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/mongodb.png" alt="" width="70" />
-            <p>mongodb</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/bootstrap.png" alt="" width="70" />
-            <p>bootstrap</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/git.png" alt="" width="70" />
-            <p>git</p>
-          </div>
-          <div class="col-md-2 col-sm-4 col-4 skill hidden">
-            <img src="img/skils/photoshop.png" alt="" width="70" />
-            <p>photoshop</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="pt-5 hidden" id="projects">
-        <h1>projects</h1>
-        <section id="project " class="hidden">
-          <div class="row p-5">
-            <div class=".col-md-6">
-              <div class="card text-dark mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="img/project/shopping card image.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">shopping cart website</h5>
-                      <p class="card-text">
-                        built using Node.js, Express, MongoDB, and Bootstrap, is
-                        a full-stack e-commerce solution. It empowers users to
-                        seamlessly browse, select, and purchase products online,
-                        providing a user-friendly interface and a range of
-                        features
-                      </p>
-                      <ul>
-                        <li>User Authentication</li>
-                        <li>Streamlined Checkout Process</li>
-                        <li>Effective Order Management</li>
-                        <li>Responsive Design</li>
-                        <li>Robust Database Integration</li>
-                      </ul>
-                      <a class="px-5" href="#" target="_blank">live</a>
-                      <a
-                        class="px-5"
-                        href="https://github.com/aneeshaugustinehub/shopping_cart"
-                        target="_blank"
-                        >repo</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="project " class="hidden">
-          <div class="row p-5">
-            <div class=".col-md-6">
-              <div class="card text-dark mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="img/project/netflix.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">
-                        Movieflix - A Netflix Clone with TMDB API and React.js
-                      </h5>
-                      <p class="card-text">
-                        Movieflix is a web application that aims to replicate
-                        the popular streaming service Netflix, leveraging the
-                        power of the TMDB (The Movie Database) API and developed
-                        using the React.js framework. This project offers users
-                        a platform to explore a vast collection of movies and TV
-                        shows, view details, and enjoy a user-friendly streaming
-                        experience.
-                      </p>
-                      <ul>
-                        <li>Home Page with Trending Content</li>
-                        <li>Responsive Design</li>
-                        <li>Dynamic Recommendations</li>
-                      </ul>
-                      <a
-                        class="px-5"
-                        href="https://aneeshaugustinehub.github.io/netflix-ui-clone/"
-                        target="_blank"
-                        >live</a
-                      >
-                      <a
-                        class="px-5"
-                        href="https://github.com/aneeshaugustinehub/netflix-ui-clone"
-                        target="_blank"
-                        >repo</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="project " class="hidden">
-          <div class="row p-5">
-            <div class=".col-md-6">
-              <div class="card text-dark mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="img/project/olx.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">
-                        olx clone - A platform for connecting buyers and sellers
-                        of used goods.
-                      </h5>
-                      <p class="card-text">
-                        MarketPlace is a React JS and Firebase-powered
-                        marketplace where you can buy, sell, and swap goods and
-                        services. With MarketPlace, you can easily find great
-                        deals on everything from furniture to electronics. You
-                        can also connect with your neighbors and support local
-                        businesses.
-                      </p>
-                      <ul>
-                        <li>Search and filter listings</li>
-                        <li>User profiles</li>
-                        <li>Contact sellers</li>
-                      </ul>
-                      <a class="px-5" href="#" target="_blank">live</a>
-                      <a
-                        class="px-5"
-                        href="https://github.com/aneeshaugustinehub/shopping_cart"
-                        target="_blank"
-                        >repo</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="pt-5 hidden" id="contact">
-        <h1>contact me</h1>
-        <div class="row justify-content-center p-5">
-          <form style="width: 700px">
-            <div class="col p-1">
-              <input type="text" class="form-control" placeholder="Your Name" />
-            </div>
-            <div class="col p-1">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Your Email"
-              />
-            </div>
-            <div class="col p-1">
-              <textarea
-                class="form-control"
-                placeholder="Your message"
-                name=""
-                id=""
-              ></textarea>
-            </div>
-            <div class="col p-1 d-grid gap-2 col-6 mx-auto">
-              <input type="submit" class="btn btn-primary" />
-            </div>
-          </form>
-        </div>
-      </section>
     </div>
+  </nav>
+  <!-- Mobile dropdown (outside nav, below it) -->
+  <div id="mobile-menu"
+    class="hidden md:hidden fixed top-20 p-1  flex-col gap-1 z-4 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#home">Home</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#about">About</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#skills">Skills</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#projects">Projects</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#contact">Contact</a>
+  </div>
+  <header class="grid md:grid-cols-2 justify-center items-center pt-10" id="home">
+    <div class="mt-10 flex justify-center items-center">
+      <img src="img/banner.webp" alt="profile image" height="500px" width="500px" />
+    </div>
+    <div class="mt-10 flex-col justify-center items-center mx-2">
+      <p>Hi, i'm</p>
+      <p class="xl:text-6xl md:text-4xl font-semibold text-5xl"> I'm Aneesh Augustine <br>
+        Full Stack Web <br> Developer.</p>
+      <p style="font-size: 1.1rem">
+        Driven by a passion for crafting immersive, <br> interactive experiences that engage and inspire users.
+        <br />
+      </p>
+      <div class="">
+        <span class="inline-flex my-5">
+          <form style="display: inline" method="get" action="file/Aneesh's Resume.pdf" target="_blank">
+            <button type="submit" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">
+              Resume
+            </button>
+          </form>
+          <a href="https://github.com/aneeshaugustinehub" target="_blank">
+            <img class="h-10 w-10" src="img/github.png" alt="Logo" />
+          </a>
+          <a href="#contact">
+            <img class="h-10 w-10" src="img/gmail.png" alt="Logo" />
+          </a>
+          <a href="https://www.linkedin.com/in/aneesh-augustine-" target="_blank">
+            <img class="h-10 w-10" src="img/linkedin.png" alt="Logo" />
+          </a>
+        </span>
+      </div>
+    </div>
+  </header>
+  <div class="lg:mx-6 mx-3">
+    <section class="" id="projects">
+      <h1 class="text-3xl font-semibold py-5">Check out my projects</h1>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full rounded-lg md:px-5">
+        <div
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 ">
+          <div class="">
+            <img src="img/project/shopping card image.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
+          </div>
+          <div class="">
+            <h5 class="projecttitile font-bold text-gray-900 dark:text-gray-200 text-lg">shopping cart website</h5>
+            <p class="">
+              built using Node.js, Express, MongoDB, and Bootstrap, is
+              a full-stack e-commerce solution. It empowers users to
+              seamlessly browse, select, and purchase products online,
+              providing a user-friendly interface and a range of
+              features
+            </p>
+            <ul class="list-disc pl-5">
+              <li>User Authentication</li>
+              <li>Streamlined Checkout Process</li>
+              <li>Effective Order Management</li>
+              <li>Responsive Design</li>
+              <li>Robust Database Integration</li>
+            </ul>
+            <div class="card-btn mt-5 flex items-end"> <a
+                class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white hidden"
+                href="#" target="_blank">live</a>
+              <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
 
-    <footer>
-      <p id="year"></p>
-    </footer>
-    <script src="animation.js"></script>
-    <script src="switch.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+            </div>
+          </div>
+        </div>
+        <div
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+          <div class="">
+            <img src="img/project/netflix.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
+          </div>
+          <div class="">
+            <h5 class="projecttitile font-bold text-gray-900 dark:text-gray-200 text-lg">
+              Movieflix - A Netflix Clone with TMDB API and React.js
+            </h5>
+            <p class="">
+              Movieflix is a web application that aims to replicate
+              the popular streaming service Netflix, leveraging the
+              power of the TMDB (The Movie Database) API and developed
+              using the React.js framework. This project offers users
+              a platform to explore a vast collection of movies and TV
+              shows, view details, and enjoy a user-friendly streaming
+              experience.
+            </p>
+            <ul class="list-disc pl-5">
+              <li>Home Page with Trending Content</li>
+              <li>Responsive Design</li>
+              <li>Dynamic Recommendations</li>
+            </ul>
+            <div class="card-btn mt-5 flex items-end"> <a
+                class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+                href="https://aneeshaugustinehub.github.io/netflix-ui-clone/" target="_blank">live</a>
+              <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/netflix-ui-clone" target="_blank">repo</a>
+
+
+            </div>
+          </div>
+        </div>
+        <div
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+          <div class="">
+            <img src="img/project/olx.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
+          </div>
+          <div class="">
+            <h5 class="projecttitile font-bold text-gray-900 dark:text-gray-200 text-lg">
+              olx clone - A platform for connecting buyers and sellers
+              of used goods.
+            </h5>
+            <p class="">
+              MarketPlace is a React JS and Firebase-powered
+              marketplace where you can buy, sell, and swap goods and
+              services. With MarketPlace, you can easily find great
+              deals on everything from furniture to electronics. You
+              can also connect with your neighbors and support local
+              businesses.
+            </p>
+            <ul class="list-disc pl-5">
+              <li>Search and filter listings</li>
+              <li>User profiles</li>
+              <li>Contact sellers</li>
+            </ul>
+            <div class="card-btn mt-5 flex items-end "> <a
+                class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white hidden"
+                href="#" target="_blank">live</a>
+              <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+
+
+            </div>
+          </div>
+        </div>
+        <div
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+          <div class="">
+            <img src="img/project/olx.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
+          </div>
+          <div class="">
+            <h5 class="projecttitile font-bold text-gray-900 dark:text-gray-200 text-lg">
+              olx clone - A platform for connecting buyers and sellers
+              of used goods.
+            </h5>
+            <p class="">
+              MarketPlace is a React JS and Firebase-powered
+              marketplace where you can buy, sell, and swap goods and
+              services. With MarketPlace, you can easily find great
+              deals on everything from furniture to electronics. You
+              can also connect with your neighbors and support local
+              businesses.
+            </p>
+            <ul class="list-disc pl-5">
+              <li>Search and filter listings</li>
+              <li>User profiles</li>
+              <li>Contact sellers</li>
+            </ul>
+            <div class="card-btn mt-5 flex items-end">
+              <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white hidden"
+                href="#" target="_blank">live</a>
+              <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5 " id="about">
+      <h1 class="text-3xl font-semibold py-5 ">about me</h1>
+      <div class="px-5 lg:mx-6">
+        <p>
+          As a skilled web developer with expertise in React JS, I have a
+          proven track record of crafting interactive user interfaces that
+          deliver engaging and seamless user experiences. With a keen eye
+          for modern web design principles and a strong command of React JS,
+          I am adept at building dynamic and high-performance web
+          applications that are responsive and scalable across various
+          devices and platforms.
+        </p>
+      </div>
+    </section>
+    <section class="" id="skills">
+      <h1 class="text-3xl font-semibold py-5">skills</h1>
+      <div class="grid lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-4 grid-cols-3">
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/html-5.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">HTML</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/css.png" alt="" width="100" class="px-4 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">CSS</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/javascript.png" alt="" width="100" class="px-4 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">javaScript</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/atom.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">React js</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/nodejs.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">node js</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/mongodb.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">mongodb</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/bootstrap.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">bootstrap</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/git.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">git</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/photoshop.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <p class="text-center font-bold text-lg">photoshop</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5" id="contact">
+      <h1 class="text-3xl font-semibold py-5">contact me</h1>
+      <div class="">
+
+        <form class="max-w-sm mx-auto">
+          <div class="mb-2">
+            <label for="name" class="block mb-1 text-sm font-medium text-heading">Your Name</label>
+            <input type="name" id="name"
+              class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body rounded-2xl"
+              placeholder="name@flowbite.com" required />
+          </div>
+          <div class="mb-2">
+            <label for="email" class="block mb-1 text-sm font-medium text-heading ">Your email</label>
+            <input type="email" id="email" aria-describedby="helper-text-explanation"
+              class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body rounded-2xl"
+              placeholder="name@flowbite.com">
+          </div>
+          <div class="mb-2">
+            <label for="message" class="block mb-2.5 text-sm font-medium text-heading rounded-2xl">Your message</label>
+            <textarea id="message" rows="4"
+              class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 text-sm w-full p-3.5 shadow-xs placeholder:text-body rounded-2xl"
+              placeholder="Write your thoughts here..."></textarea>
+          </div class="mb-2">
+          <button type="submit"
+            class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white focus:outline-none">Submit</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <footer class="flex justify-center">
+    <p id="year"></p>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
 </html>
