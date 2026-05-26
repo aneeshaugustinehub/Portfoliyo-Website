@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
+<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="animation.css" />
   <title>Aneesh Augustine</title>
-  <link rel="shortcut icon" href="img/pp.png" type="image/x-icon" 
-/>  <!-- 1. Tailwind CDN -->
+  <link rel="shortcut icon" href="img/pp.png" type="image/x-icon" /> <!-- 1. Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- 2. Tailwind config -->
   <script>
@@ -26,22 +25,21 @@
   </script>
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
-  <nav
-    class="w-full p-2 my-2 fixed bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-xl backdrop-blur-md">
-    <div class="lg:inline-flex flex justify-center items-center p-2">
+<body class=" bg-purple-200 dark:bg-purple-700 text-gray-800 dark:text-gray-200">
+  <nav class="w-full p-2 my-2 fixed bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-xl backdrop-blur-md">
+    <div class="w-full md:inline-flex items-center p-2 px-5">
       <div class="mx-5">
         <a class="text-xl" href="/">Aneesh Augustine</a>
       </div>
       <div class=" lg:inline-flex flex mx-5">
-        <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" aria-current="page"
+        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" aria-current="page"
           href="#">Home</a>
-        <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#about">about</a>
-        <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#skills">skills</a>
-        <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#projects">projects</a>
-        <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#contact">contact</a>
+        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#about">about</a>
+        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#skills">skills</a>
+        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#projects">projects</a>
+        <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#contact">contact</a>
       </div>
-      <div>
+      <div class="dark-button  ml-auto">
         <!-- Sun icon (shown in dark mode) | Moon icon (shown in light mode) -->
         <button id="theme-toggle" class="rounded-2xl bg-gray-950/50 px-5 py-3 text-sm font-medium text-white">
           <!-- Moon icon - visible in light mode -->
@@ -58,13 +56,13 @@
       </div>
     </div>
   </nav>
-  <header class="lg:inline-flex justify-center align-middle pt-20 px-5" id="home">
-    <div class="">
+  <header class="grid md:grid-cols-2 justify-center items-center pt-10" id="home">
+    <div class="mt-10 flex justify-center items-center">
       <img src="img/banner.webp" alt="profile image" height="500px" width="500px" />
     </div>
-    <div class="my-25">
+    <div class="mt-10 flex-col justify-center items-center">
       <p>Hi, i'm</p>
-      <p class="text-5xl"> I'm Aneesh Augustine <br>
+      <p class="xl:text-6xl md:text-4xl text-5xl"> I'm Aneesh Augustine <br>
         Full Stack Web <br> Developer.</p>
       <p style="font-size: 1.1rem">
         Driven by a passion for crafting immersive, <br> interactive experiences that engage and inspire users.
@@ -108,17 +106,21 @@
               providing a user-friendly interface and a range of
               features
             </p>
-            <ul>
+            <ul class="list-disc pl-5">
               <li>User Authentication</li>
               <li>Streamlined Checkout Process</li>
               <li>Effective Order Management</li>
               <li>Responsive Design</li>
               <li>Robust Database Integration</li>
             </ul>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#"
-              target="_blank">live</a>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
-              href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+            <div class="card-btn mt-5 flex items-end"> <a
+                class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white hidden" href="#"
+                target="_blank">live</a>
+              <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+
+
+            </div>
           </div>
         </div>
         <div
@@ -139,15 +141,19 @@
               shows, view details, and enjoy a user-friendly streaming
               experience.
             </p>
-            <ul>
+            <ul class="list-disc pl-5">
               <li>Home Page with Trending Content</li>
               <li>Responsive Design</li>
               <li>Dynamic Recommendations</li>
             </ul>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
-              href="https://aneeshaugustinehub.github.io/netflix-ui-clone/" target="_blank">live</a>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
-              href="https://github.com/aneeshaugustinehub/netflix-ui-clone" target="_blank">repo</a>
+            <div class="card-btn mt-5 flex items-end"> <a
+                class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
+                href="https://aneeshaugustinehub.github.io/netflix-ui-clone/" target="_blank">live</a>
+              <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/netflix-ui-clone" target="_blank">repo</a>
+
+
+            </div>
           </div>
         </div>
         <div
@@ -168,15 +174,19 @@
               can also connect with your neighbors and support local
               businesses.
             </p>
-            <ul>
+            <ul class="list-disc pl-5">
               <li>Search and filter listings</li>
               <li>User profiles</li>
               <li>Contact sellers</li>
             </ul>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#"
-              target="_blank">live</a>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
-              href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+            <div class="card-btn mt-5 flex items-end "> <a
+                class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white hidden" href="#"
+                target="_blank">live</a>
+              <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+
+
+            </div>
           </div>
         </div>
         <div
@@ -197,15 +207,17 @@
               can also connect with your neighbors and support local
               businesses.
             </p>
-            <ul>
+            <ul class="list-disc pl-5">
               <li>Search and filter listings</li>
               <li>User profiles</li>
               <li>Contact sellers</li>
             </ul>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white" href="#"
-              target="_blank">live</a>
-            <a class="rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
-              href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+            <div class="card-btn mt-5 flex items-end">
+              <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white hidden" href="#"
+                target="_blank">live</a>
+              <a class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+            </div>
           </div>
         </div>
       </div>
@@ -226,7 +238,7 @@
     </section>
     <section class="" id="skills">
       <h1 class="text-4xl py-5">skills</h1>
-      <div class="lg:mx-6 grid lg:grid-cols-6 sm:grid-cols-4 md:grid-cols-5 ">
+      <div class="grid lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-4 grid-cols-3">
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
             <img src="img/skils/html-5.png" alt="" width="100" class="px-2 py-2 skillicon" />
@@ -285,20 +297,28 @@
     </section>
     <section class="pt-5" id="contact">
       <h1 class="text-4xl py-5">contact me</h1>
-      <div class="row justify-content-center p-5 lg:mx-6">
-        <form class="">
-          <div class="">
-            <input type="text" class="" placeholder="Your Name" />
+      <div class="">
+
+        <form class="max-w-sm mx-auto">
+          <div class="mb-2">
+            <label for="name" class="block mb-1 text-sm font-medium text-heading">Your Name</label>
+            <input type="name" id="name"
+              class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body rounded-2xl"
+              placeholder="name@flowbite.com" required />
           </div>
-          <div class="">
-            <input type="email" class="" placeholder="Your Email" />
+          <div class="mb-2">
+            <label for="email" class="block mb-1 text-sm font-medium text-heading ">Your email</label>
+            <input type="email" id="email" aria-describedby="helper-text-explanation"
+              class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body rounded-2xl"
+              placeholder="name@flowbite.com">
           </div>
-          <div class="">
-            <textarea class="" placeholder="Your message" name="" id=""></textarea>
-          </div>
-          <div class="">
-            <input type="" class="" />
-          </div>
+          <div class="mb-2">
+            <label for="message" class="block mb-2.5 text-sm font-medium text-heading rounded-2xl">Your message</label>
+            <textarea id="message" rows="4"
+              class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 text-sm w-full p-3.5 shadow-xs placeholder:text-body rounded-2xl"
+              placeholder="Write your thoughts here..."></textarea>
+          </div class="mb-2">
+          <button type="submit" class="mx-1 hover:bg-gray-950/80 rounded-2xl bg-gray-950/50 px-5 py-4 text-sm font-medium text-white focus:outline-none">Submit</button>
         </form>
       </div>
     </section>
