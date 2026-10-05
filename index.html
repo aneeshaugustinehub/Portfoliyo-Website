@@ -24,57 +24,66 @@
   </script>
 </head>
 
-<body class=" bg-purple-200 dark:bg-purple-700 text-gray-800 dark:text-gray-200">
-  <nav
-    class="w-full inline-flex h-16 px-0 my-2 fixed bg-gray-400/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-xl backdrop-blur-md">
-    <div class="drop-menu w-full h-full inline-flex items-center px-2" id="drop-menu">
-      <div class="mx-4">
-        <a class="text-xl font-semibold" href="/">Aneesh Augustine</a>
-      </div>
-      <div class="hidden md:flex md:flex-row flex-col">
-        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
-          aria-current="page" href="#">Home</a>
-        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
-          href="#about">about</a>
-        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
-          href="#skills">skills</a>
-        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
-          href="#projects">projects</a>
-        <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
-          href="#contact">contact</a>
-      </div>
-      <div class="dark-button md:flex md:flex-row flex-col ml-auto">
-        <!-- Sun icon (shown in dark mode) | Moon icon (shown in light mode) -->
-        <button id="theme-toggle"
-          class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white">
-          <!-- Moon icon - visible in light mode -->
-          <svg id="moon-icon" class="w-6 h-6 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-          </svg>
-          <!-- Sun icon - visible in dark mode -->
-          <svg id="Sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden dark:block" fill="currentColor"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-          </svg>
-        </button>
-        <button class="md:hidden buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white" id="menu-toggle">
+<body class="w-screen bg-purple-200 dark:bg-purple-700 text-gray-800 dark:text-gray-200">
+  <nav>
+    <div
+      class="inset-x-5 left: 1.25rem; right: 1.25rem  top-2  inline-flex h-16 px-0 fixed bg-gray-400/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-xl backdrop-blur-md">
+      <div class="drop-menu w-full h-full inline-flex items-center px-2" id="drop-menu">
+        <div class="mx-4">
+          <a class="text-xl font-semibold" href="/">Aneesh Augustine</a>
+        </div>
+        <div class="hidden md:flex md:flex-row flex-col">
+          <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+            aria-current="page" href="#">Home</a>
+          <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+            href="#about">about</a>
+          <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+            href="#skills">skills</a>
+          <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+            href="#projects">projects</a>
+          <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+            href="#contact">contact</a>
+        </div>
+        <div class="dark-button md:flex md:flex-row flex-col ml-auto ">
+          <!-- Sun icon (shown in dark mode) | Moon icon (shown in light mode) -->
+          <button id="theme-toggle"
+            class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white">
+            <!-- Moon icon - visible in light mode -->
+            <svg id="moon-icon" class="w-6 h-6 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+            <!-- Sun icon - visible in dark mode -->
+            <svg id="Sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden dark:block" fill="currentColor"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
+          </button>
+          <button
+            class="md:hidden buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+            id="menu-toggle">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
   <!-- Mobile dropdown (outside nav, below it) -->
   <div id="mobile-menu"
     class="hidden md:hidden fixed top-20 p-1  flex-col gap-1 z-4 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
-    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#home">Home</a>
-    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#about">About</a>
-    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#skills">Skills</a>
-    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#projects">Projects</a>
-    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white" href="#contact">Contact</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white"
+      href="#home">Home</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white"
+      href="#about">About</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white"
+      href="#skills">Skills</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white"
+      href="#projects">Projects</a>
+    <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-5 py-2 text-sm font-medium text-white"
+      href="#contact">Contact</a>
   </div>
   <header class="grid md:grid-cols-2 justify-center items-center pt-10" id="home">
     <div class="mt-10 flex justify-center items-center">
@@ -112,6 +121,37 @@
     <section class="" id="projects">
       <h1 class="text-3xl font-semibold py-5">Check out my projects</h1>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full rounded-lg md:px-5">
+        <div
+          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
+          <div class="">
+            <img src="img/project/Snippet.png" class="rounded-2xl projectimage mb-5" alt="..." />
+          </div>
+          <div class="">
+            <h5 class="projecttitile font-bold text-gray-900 dark:text-gray-200 text-lg">
+              Snippet — A microblogging platform built for developers to share thoughts, code snippets, and updates in
+              real time.
+            </h5>
+            <p class="">
+              Snippet is a React and Node.js-powered social platform where developers can post short updates, share code
+              snippets, and engage with a feed tailored to their interests. With Snippet, you can like and bookmark
+              posts, follow other developers, and build a personalized timeline of content that matters to you.
+            </p>
+            <ul class="list-disc pl-5">
+              <li>Real-time-style feed with optimized parallel data fetching
+              <li>User profiles with follow/unfollow relationships
+              <li>Like and bookmark posts for later
+                <!-- <li>Image uploads with secure JWT-based authentication -->
+              <li>Fast, responsive UI built with React and Tailwind CSS
+            </ul>
+            <div class="card-btn mt-5 flex items-end "> <a
+                class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white hidden"
+                href="#" target="_blank">live</a>
+              <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
+                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
+            </div>
+          </div>
+        </div>
+
         <div
           class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 ">
           <div class="">
@@ -199,39 +239,6 @@
               <li>User profiles</li>
               <li>Contact sellers</li>
             </ul>
-            <div class="card-btn mt-5 flex items-end "> <a
-                class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white hidden"
-                href="#" target="_blank">live</a>
-              <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white"
-                href="https://github.com/aneeshaugustinehub/shopping_cart" target="_blank">repo</a>
-
-
-            </div>
-          </div>
-        </div>
-        <div
-          class="card mt-6 lg:mx-4 md:mx-3 py-5 px-3 rounded-2xl bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400">
-          <div class="">
-            <img src="img/project/olx.jpg" class="rounded-2xl projectimage mb-5" alt="..." />
-          </div>
-          <div class="">
-            <h5 class="projecttitile font-bold text-gray-900 dark:text-gray-200 text-lg">
-              olx clone - A platform for connecting buyers and sellers
-              of used goods.
-            </h5>
-            <p class="">
-              MarketPlace is a React JS and Firebase-powered
-              marketplace where you can buy, sell, and swap goods and
-              services. With MarketPlace, you can easily find great
-              deals on everything from furniture to electronics. You
-              can also connect with your neighbors and support local
-              businesses.
-            </p>
-            <ul class="list-disc pl-5">
-              <li>Search and filter listings</li>
-              <li>User profiles</li>
-              <li>Contact sellers</li>
-            </ul>
             <div class="card-btn mt-5 flex items-end">
               <a class="buttion hover:bg-gray-950/80 transition-colors duration-300 rounded-2xl bg-gray-950/50 px-4 py-3 my-2 mx-1 text-sm font-medium text-white hidden"
                 href="#" target="_blank">live</a>
@@ -261,55 +268,73 @@
       <div class="grid lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-4 grid-cols-3">
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/html-5.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <img src="img/skils/html-5.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">HTML</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/css.png" alt="" width="100" class="px-4 py-2 skillicon" />
+            <img src="img/skils/css.png" alt="" width="100" class="px-4 py-4 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">CSS</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/javascript.png" alt="" width="100" class="px-4 py-2 skillicon" />
+            <img src="/img/skils/tailwind.png" alt="" width="100" class="px-4 py-4 bg-white rounded-full skillicon" />
+            <p class="text-center font-bold text-lg">Tailwind CSS</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="/img/skils/javascript.png" alt="" width="100" class="px-4 py-4 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">javaScript</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/atom.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <img src="img/skils/atom.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">React js</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/nodejs.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <img src="img/skils/nodejs.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">node js</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/mongodb.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <img src="img/skils/nodejs ex.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
+            <p class="text-center font-bold text-lg">Express.js </p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/mongodb.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">mongodb</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/bootstrap.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <img src="img/skils/bootstrap.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">bootstrap</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/git.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <img src="img/skils/git.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">git</p>
           </div>
         </div>
         <div class="m-2 px-2 flex justify-center">
           <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
-            <img src="img/skils/photoshop.png" alt="" width="100" class="px-2 py-2 skillicon" />
+            <img src="img/skils/github.svg" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
+            <p class="text-center font-bold text-lg">git hub</p>
+          </div>
+        </div>
+        <div class="m-2 px-2 flex justify-center">
+          <div class="skill px-5 bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 rounded-2xl">
+            <img src="img/skils/photoshop.png" alt="" width="100" class="px-2 py-2 bg-white rounded-full skillicon" />
             <p class="text-center font-bold text-lg">photoshop</p>
           </div>
         </div>
@@ -318,19 +343,206 @@
     <section class="pt-5" id="contact">
       <h1 class="text-3xl font-semibold py-5">contact me</h1>
       <div class="">
-
+        <div jscontroller="yUS4Lc" jsaction="rcuQ6b:rcuQ6b;UxRBlf:rcuQ6b;">
+          <div jsname="o6bZLc"><input type="hidden" name="entry.1871417460" value=""><input type="hidden"
+              name="entry.1287552610" value=""><input type="hidden" name="entry.757916749" value=""></div>
+        </div>
+        <div class="RH5hzf RLS9Fe">
+          <div class="lrKTG">
+            <div class="Dq4amc">
+                  <div jsname="F0H8Yc" class="liS6Hc"></div>
+                </div>
+                <div class="zAVwcb"></div>
+                <div class="DqBBlb">
+                  <div class="Oh1Vtf">
+                    <div class="tMRmsd" id="wSDd7b">
+                      <div class="ut7aeb">
+                        <div class="eAQI0e"><span class="EbMsme">aneeshaugustine911@gmail.com</span> <a
+                            href="https://accounts.google.com/AccountChooser?continue=https://docs.google.com/forms/d/e/1FAIpQLSf2saCyYxRls9-lJa7IElotsqMLrBWEKL-iQkzdkJjeyDoScA/viewform?usp%3Dpublish-editor&amp;service=wise"
+                            aria-describedby="wSDd7b" class="jZZ5Nd">Switch account</a></div>
+                      </div>
+                      <div class="ut7aeb KA8vlc">
+                        <div jscontroller="By0w6"
+                          jsaction="mouseover:eGiyHb; click:eGiyHb; focus:eGiyHb; touchstart:eGiyHb;"
+                          data-tooltip="Your email and Google account are not part of your response"
+                          aria-label="Your email and Google account are not part of your response" role="img"
+                          tabindex="0">
+                          <div class="Axnmtb">
+                            <div class="foqfDc gdyQ3c">
+                              <div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-xvr5H-lcE6r-JLm1tf-vTZmwf-BvMwwf"
+                                aria-hidden="true">&nbsp;</div>
+                              <div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-xvr5H-lcE6r-JLm1tf-vTZmwf-AhqUyc"
+                                aria-hidden="true">&nbsp;</div>
+                              <div class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-xvr5H-lcE6r-JLm1tf-vTZmwf"
+                                aria-hidden="true">&nbsp;</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="Q99PAd">Not shared</div>
+                      </div>
+                    </div>
+                    <div class="UpwdYb" jscontroller="rmdjlf" jsaction="rcuQ6b:npT2md; click:xdDXgc;">
+                      <div class="foqfDc gdyQ3c">
+                        <div class="Y0xAIe BNL9Bd NpcyEe-n5T17d-Bz112c-DcLNVc-iib5kc-BvMwwf" aria-hidden="true">&nbsp;
+                        </div>
+                        <div class="Y0xAIe ivmiLb NpcyEe-n5T17d-Bz112c-DcLNVc-iib5kc-AhqUyc" aria-hidden="true">&nbsp;
+                        </div>
+                        <div class="Y0xAIe tDDvMb NpcyEe-n5T17d-Bz112c-DcLNVc-iib5kc" aria-hidden="true">&nbsp;</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="o3Dpx" role="list">
+              <div class="Qr7Oae" role="listitem">
+                <div jsmodel="CP1oW"
+                  data-params="%.@.[760187992,&quot;Name&quot;,null,0,[[1871417460,null,false,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;Name&quot;]],&quot;i1&quot;,&quot;i2&quot;,&quot;i3&quot;,false,&quot;i4&quot;]">
+                  <div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n">
+                    <div class="z12JJ">
+                      <div class="M4DNQ">
+                        <div id="i1" class="HoXoMd D1wxyf RjsPE" role="heading" aria-level="3"><span
+                            class="M7eMe">Name</span></div>
+                        <div class="gubaDc OIC90c RjsPE" id="i2"></div>
+                      </div>
+                    </div>
+                    <div jscontroller="oCiKKc"
+                      jsaction="rcuQ6b:vZc4S;O22p3e:zjh6rb;b2trFe:eVidQc;sPvj8e:d3sQLd;AHmuwe:h06R8;" class="AgroKb">
+                      <div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd" jscontroller="pxq3x"
+                        jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf">
+                        <div class="aCsJod oJeWuf">
+                          <div class="aXBtI Wic03c">
+                            <div class="Xb9hP"><input type="text" class="whsOnd zHQkBf" jsname="YPqjbf"
+                                autocomplete="off" tabindex="0" aria-labelledby="i1 i4" aria-describedby="i2 i3"
+                                aria-disabled="false" dir="auto" data-initial-dir="auto" data-initial-value="">
+                              <div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">Your answer</div>
+                            </div>
+                            <div class="i9lrp mIZh1c"></div>
+                            <div jsname="XmnwAc" class="OabDMe cXrdqd"></div>
+                          </div>
+                        </div>
+                        <div class="LXRPh">
+                          <div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div jsname="Rfh2Tc" class="SL4Sz" id="i3" role="alert"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="Qr7Oae" role="listitem">
+                <div jsmodel="CP1oW"
+                  data-params="%.@.[113447504,&quot;Email&quot;,null,0,[[1287552610,null,false,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;Email&quot;]],&quot;i6&quot;,&quot;i7&quot;,&quot;i8&quot;,false,&quot;i9&quot;]">
+                  <div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n">
+                    <div class="z12JJ">
+                      <div class="M4DNQ">
+                        <div id="i6" class="HoXoMd D1wxyf RjsPE" role="heading" aria-level="3"><span
+                            class="M7eMe">Email</span></div>
+                        <div class="gubaDc OIC90c RjsPE" id="i7"></div>
+                      </div>
+                    </div>
+                    <div jscontroller="oCiKKc"
+                      jsaction="rcuQ6b:vZc4S;O22p3e:zjh6rb;b2trFe:eVidQc;sPvj8e:d3sQLd;AHmuwe:h06R8;" class="AgroKb">
+                      <div class="rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd" jscontroller="pxq3x"
+                        jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf">
+                        <div class="aCsJod oJeWuf">
+                          <div class="aXBtI Wic03c">
+                            <div class="Xb9hP"><input type="text" class="whsOnd zHQkBf" jsname="YPqjbf"
+                                autocomplete="off" tabindex="0" aria-labelledby="i6 i9" aria-describedby="i7 i8"
+                                aria-disabled="false" dir="auto" data-initial-dir="auto" data-initial-value="">
+                              <div jsname="LwH6nd" class="ndJi5d snByac" aria-hidden="true">Your answer</div>
+                            </div>
+                            <div class="i9lrp mIZh1c"></div>
+                            <div jsname="XmnwAc" class="OabDMe cXrdqd"></div>
+                          </div>
+                        </div>
+                        <div class="LXRPh">
+                          <div jsname="ty6ygf" class="ovnfwe Is7Fhb"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div jsname="Rfh2Tc" class="SL4Sz" id="i8" role="alert"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="Qr7Oae" role="listitem">
+                <div jsmodel="CP1oW"
+                  data-params="%.@.[773693483,&quot;message&quot;,null,1,[[757916749,null,false,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;message&quot;]],&quot;i11&quot;,&quot;i12&quot;,&quot;i13&quot;,false,&quot;i14&quot;]">
+                  <div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" jsname="WsjYwc" class="geS5n">
+                    <div class="z12JJ">
+                      <div class="M4DNQ">
+                        <div id="i11" class="HoXoMd D1wxyf RjsPE" role="heading" aria-level="3"><span
+                            class="M7eMe">message</span></div>
+                        <div class="gubaDc OIC90c RjsPE" id="i12"></div>
+                      </div>
+                    </div>
+                    <div jscontroller="oCiKKc"
+                      jsaction="rcuQ6b:vZc4S;O22p3e:zjh6rb;b2trFe:eVidQc;sPvj8e:d3sQLd;AHmuwe:h06R8;" class="AgroKb">
+                      <div class="edhGSc zKHdkd kRy7qc RdH0ib yqQS1" jscontroller="pxq3x"
+                        jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV" jsshadow="" jsname="YPqjbf">
+                        <div class="RpC4Ne oJeWuf">
+                          <div class="F1pOBe snByac" aria-hidden="true" jsname="LwH6nd">Your answer</div>
+                          <div class="Pc9Gce Wic03c"><textarea class="KHxj8b tL9Q4c" jsname="YPqjbf" data-rows="1"
+                              tabindex="0" aria-label="Your answer" jscontroller="gZjhIf"
+                              jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" dir="auto" data-initial-dir="auto"
+                              data-initial-value="" aria-labelledby="i11 i14" aria-describedby="i12 i13"
+                              style="height: 24px;" aria-disabled="false"></textarea></div>
+                          <div class="z0oSpf mIZh1c"></div>
+                          <div jsname="XmnwAc" class="Bfurwb cXrdqd"></div>
+                        </div>
+                        <div class="jE8NUc">
+                          <div jsname="ty6ygf" class="YElZX Is7Fhb"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div jsname="Rfh2Tc" class="SL4Sz" id="i13" role="alert"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ThHDze" jscontroller="lSvzH"
+              jsaction="rcuQ6b:npT2md;JIbuQc:qV61Ff(X5DuWc),Gl574d(QR6bsb),V3upec(GeGHKb),HiUbje(M2UYVd),NPBnCf(OCpkoe); keydown:duASZc"
+              data-shuffle-seed="4784993041529406540" data-should-execute-invisible-captcha-on-form-submit="false"
+              data-is-receipt-checked="false">
+              <div class="DE3NNc CekdCb">
+                <div class="lRwqcd">
+                  <div role="button" class="uArJ5e UQuaGc Y5sE8d VkkpIf QvWxOd" jscontroller="VXdfxd"
+                    jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;"
+                    jsshadow="" jsname="M2UYVd" aria-label="Submit" tabindex="0">
+                    <div class="Fvio9d MbhUzd" jsname="ksKsZd"></div>
+                    <div class="e19J0b CeoRYc"></div><span jsslot="" class="l4V7wb Fxmcue"><span
+                        class="NPEfkd RveJvd snByac">Submit</span></span>
+                  </div>
+                </div>
+                <div class="nYdzXd">
+                  <div role="button" class="uArJ5e UQuaGc kCyAyd l3F1ye TFBnVe" jscontroller="VXdfxd"
+                    jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue;touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc(preventDefault=true); touchcancel:JMtRjd;focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;"
+                    jsshadow="" jsname="X5DuWc" tabindex="0">
+                    <div class="Fvio9d MbhUzd" jsname="ksKsZd"></div>
+                    <div class="e19J0b CeoRYc"></div><span jsslot="" class="l4V7wb Fxmcue"><span
+                        class="NPEfkd RveJvd snByac">Clear form</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="T2dutf">Never submit passwords through Google Forms.</div>
+            </div><input type="hidden" name="fvv" value="1"><input type="hidden" name="partialResponse"
+              value="[null,null,&quot;4784993041529406540&quot;]"><input type="hidden" name="pageHistory"
+              value="0"><input type="hidden" name="fbzx" value="4784993041529406540"><input type="hidden"
+              name="submissionTimestamp" value="-1">
+          </div>
+        </div>
         <form class="max-w-sm mx-auto">
           <div class="mb-2">
             <label for="name" class="block mb-1 text-sm font-medium text-heading">Your Name</label>
             <input type="name" id="name"
               class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body rounded-2xl"
-              placeholder="name@flowbite.com" required />
+              placeholder="john" required />
           </div>
           <div class="mb-2">
             <label for="email" class="block mb-1 text-sm font-medium text-heading ">Your email</label>
             <input type="email" id="email" aria-describedby="helper-text-explanation"
               class="bg-gray-100/60 dark:bg-gray-900/60 text-gray-900 dark:text-gray-400 border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body rounded-2xl"
-              placeholder="name@flowbite.com">
+              placeholder="john@mail.com">
           </div>
           <div class="mb-2">
             <label for="message" class="block mb-2.5 text-sm font-medium text-heading rounded-2xl">Your message</label>
